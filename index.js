@@ -36,7 +36,7 @@ const renderArticle = (articleId) => {
     </p>
     <img
      class="blog-image card-image"
-     src="/images/${picture}"
+     src="/my-learning-journal/images/${picture}"
      alt="blog title image"
      />
   ${longText
@@ -112,7 +112,7 @@ const blogCard = (blogpost) => {
   return ` <section class="blog-card">
     <img
       class="card-image"
-      src="/images/${picture}"
+      src="/my-learning-journal/images/${picture}"
       alt="blog title image"
     />
     <h3 class="date" >${date}</h3>
