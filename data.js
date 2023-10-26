@@ -22,7 +22,7 @@ export const blogPostData = [
                  That helped me grok what I was learning, and I realized that posting my learning summaries was also helping others learn and stay motivated.`,
       },
     ],
-    picture: "article-image-hero.png",
+    picture: "article-image-hero.PNG",
   },
   {
     title: "Blog One",
