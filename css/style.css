@@ -1,0 +1,307 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  font-family: "Source Sans Pro";
+  background-color: #fafafa;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Typo --- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+li,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.blog-card h1 {
+  font-size: 1.5rem;
+}
+
+h1:hover {
+  cursor: pointer;
+}
+
+h2 {
+  color: #0e0e0e;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 0.75em 0;
+}
+
+.hero h3,
+.blog-post h3 {
+  padding: 0;
+  font-size: 0.75rem;
+  margin-bottom: 0.75em;
+}
+
+h4 {
+  color: #ececec;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+h5 {
+  color: #d7d7d7;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 400;
+  padding: 0.5em;
+}
+
+.hero h1,
+.hero p {
+  max-width: 550px;
+}
+
+li {
+  color: #090909;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.subheading {
+  color: #151515;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 1em 0;
+}
+
+.blog-post p {
+  color: #151515;
+}
+
+/* --- LAYOUT ---*/
+header {
+  padding: 0.5em 1.25em;
+  background-color: white;
+}
+
+header,
+.hero,
+main {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: 0.25em;
+}
+
+.title:hover {
+  cursor: pointer;
+}
+
+nav {
+  margin-left: auto;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  margin-left: auto;
+}
+
+.hero {
+  background: url("/images/article-image-hero.png") black;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 5.5em 1em 2em;
+}
+
+main {
+  padding: 1.25em;
+  padding-bottom: 3em;
+}
+
+.card-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+footer {
+  background-color: #202020;
+  padding: 2em;
+  letter-spacing: 0.05em;
+  flex-grow: 1;
+  width: 99vw;
+  margin: 0;
+}
+
+/* --- BUTTONS --- */
+
+.btn {
+  background-color: white;
+  border: none;
+  font-family: "Source Sans Pro";
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.view-more {
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+/* --- BLOG POST ---*/
+.blog-image {
+  margin-top: 1em;
+}
+
+.blog-post,
+.recent-posts {
+  grid-column: 1/-1;
+}
+
+.recent-posts {
+  margin: 0;
+}
+
+.view-more {
+  background-color: #fafafa;
+}
+
+/* --- ABOUT ME ---*/
+
+.about-me {
+  padding: 1.25em;
+}
+
+.profile-img {
+  width: 11.3em;
+  height: 11.3em;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1.5em;
+}
+
+.about-me h1 {
+  letter-spacing: -0.0675rem;
+  font-size: 2.25rem;
+}
+
+/* --- UTILITY ---*/
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 2em;
+  column-gap: 1em;
+}
+
+.opaque {
+  opacity: 90%;
+}
+
+.date {
+  text-transform: uppercase;
+}
+
+.center {
+  text-align: center;
+}
+
+@media (width >= 480px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .view-more {
+    grid-column: span 2;
+  }
+  .hero {
+    padding: 15em 3.3em 3.7em;
+  }
+}
+
+@media (width >= 768px) {
+  header {
+    padding: 0.5em 3.3em;
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .view-more {
+    grid-column: span 3;
+  }
+  .about-me {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "image header"
+      "image shortText"
+      "content content";
+    padding: 3em 3.3em;
+  }
+
+  .profile-img {
+    grid-area: image;
+    margin-right: 2em;
+  }
+
+  .about-me h1 {
+    grid-area: header;
+    align-self: end;
+  }
+
+  .about-me p {
+    grid-area: shortText;
+  }
+  .content-container {
+    grid-area: content;
+    padding: 1em 4em;
+  }
+}
+
+.hidden {
+  display: none;
+}
