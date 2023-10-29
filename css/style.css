@@ -210,6 +210,8 @@ footer {
 
 .about-me {
   padding: 1.25em;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .profile-img {
