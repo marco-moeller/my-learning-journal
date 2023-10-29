@@ -112,7 +112,7 @@ const blogCard = (blogpost) => {
   return ` <section class="blog-card">
     <img
       class="card-image"
-      src="./my-learning-journal/images/${picture}"
+      src="/my-learning-journal/images/${picture}"
       alt="blog title image"
     />
     <h3 class="date" >${date}</h3>
