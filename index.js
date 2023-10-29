@@ -36,7 +36,7 @@ const renderArticle = (articleId) => {
     </p>
     <img
      class="blog-image card-image"
-     src="./my-learning-journal/images/${picture}"
+     src="/images/${picture}"
      alt="blog title image"
      />
   ${longText
